@@ -1,11 +1,18 @@
 import "./App.css";
 import Counter from "./components/counter/Counter";
 import ImageTask from "./components/imagetask/ImageTask";
+import { Nav } from "./components/nav/Nav";
+import Products from "./components/products/Products";
+import { Home } from "./home/Home";
+
 function App() {
   return (
     <div className="app">
-      <ImageTask />
+      <Nav />
       <Counter />
+      <ImageTask />
+      <Products />
+      <Home />
     </div>
   );
 }
