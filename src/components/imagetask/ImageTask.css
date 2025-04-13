@@ -1,0 +1,10 @@
+.card {
+  box-shadow: 0 0 10px rgb(231, 48, 78);
+  padding: 50px;
+  margin: 50px auto;
+  padding: 50px;
+  width: 500px;
+}
+.card button {
+  margin-right: 10px;
+}

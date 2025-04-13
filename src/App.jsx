@@ -1,9 +1,10 @@
 import "./App.css";
 import Counter from "./components/counter/Counter";
-
+import ImageTask from "./components/imagetask/ImageTask";
 function App() {
   return (
     <div className="app">
+      <ImageTask />
       <Counter />
     </div>
   );
