@@ -9,6 +9,8 @@ import { Electronics } from "./components/products/categories/electronics/Electr
 import { Womens } from "./components/products/categories/womens/Womens";
 import { Jewelries } from "./components/products/categories/jewelleries/Jewelleries";
 import { Mens } from "./components/products/categories/mens/Mens";
+import { PageNotFound } from "./components/pagenotfound/PageNotFound";
+import { AllProducts } from "./components/allproducts/AllProducts";
 
 function App() {
   return (
@@ -22,8 +24,10 @@ function App() {
           <Route path={"mencloth"} element={<Mens />} />
           <Route path={"womencloth"} element={<Womens />} />
         </Route>
+        <Route path={"/allproducts"} element={<AllProducts />} />
         <Route path={"/counter"} element={<Counter />} />
         <Route path={"/imagetask"} element={<ImageTask />} />
+        <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
     </div>
   );
