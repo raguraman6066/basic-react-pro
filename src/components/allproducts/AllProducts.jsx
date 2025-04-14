@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
+import "./AllProducts.css";
+import { Card } from "./card/Card";
 export const AllProducts = () => {
+  let [allproducts, setallproducts] = useState([]);
   const getProducts = () => {
     var promiseObject = axios.get("https://fakestoreapi.com/products");
     //return one promise object
     promiseObject
       .then((response) => {
         console.log("response", response.data);
+        setallproducts(response.data);
       })
       .catch((error) => {
         console.log("error", error);
@@ -35,6 +39,18 @@ export const AllProducts = () => {
         voluptates earum velit quae ab adipisci consequuntur?
       </p>
       <button onClick={getProducts}>Get Products</button>
+
+      <div className="allproductsdata">
+        {allproducts.map((product) => {
+          return (
+            <Card
+              title={product.title}
+              image={product.image}
+              price={product.price}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

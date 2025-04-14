@@ -11,6 +11,7 @@ import { Jewelries } from "./components/products/categories/jewelleries/Jeweller
 import { Mens } from "./components/products/categories/mens/Mens";
 import { PageNotFound } from "./components/pagenotfound/PageNotFound";
 import { AllProducts } from "./components/allproducts/AllProducts";
+import { UserNames } from "./components/user-names/UserNames";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path={"/allproducts"} element={<AllProducts />} />
         <Route path={"/counter"} element={<Counter />} />
         <Route path={"/imagetask"} element={<ImageTask />} />
+        <Route path={"/usernames"} element={<UserNames />} />
         <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
     </div>
