@@ -12,13 +12,16 @@ import { Mens } from "./components/products/categories/mens/Mens";
 import { PageNotFound } from "./components/pagenotfound/PageNotFound";
 import { AllProducts } from "./components/allproducts/AllProducts";
 import { UserNames } from "./components/user-names/UserNames";
+import { A } from "./components/parent-child/A";
+import { B } from "./components/parent-child/B";
 
 function App() {
   return (
     <div className="app">
       <Nav />
+
       <Routes>
-        <Route path={"/"} element={<Home />} />
+        <Route path={"/"} element={<B />} />
         <Route path={"/products"} element={<Products />}>
           <Route path={"electronics"} element={<Electronics />} />
           <Route path={"jewellery"} element={<Jewelries />} />
