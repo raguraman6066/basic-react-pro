@@ -16,12 +16,13 @@ import { A } from "./components/context-api/A";
 import { HomeContext } from "./components/context-api/HomeContext";
 import { Name } from "./components/child-parent/Name";
 import { Ref } from "./components/ref/Ref";
+import { Timer } from "./components/timer/Timer";
 
 function App() {
   return (
     <div className="app">
       <Nav />
-      <Ref />
+      <Timer />
       {/* 
       <Routes>
         <Route path={"/"} element={<B />} />
