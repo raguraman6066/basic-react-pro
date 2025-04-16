@@ -12,14 +12,17 @@ import { Mens } from "./components/products/categories/mens/Mens";
 import { PageNotFound } from "./components/pagenotfound/PageNotFound";
 import { AllProducts } from "./components/allproducts/AllProducts";
 import { UserNames } from "./components/user-names/UserNames";
-import { A } from "./components/parent-child/A";
-import { B } from "./components/parent-child/B";
+import { A } from "./components/context-api/A";
+import { HomeContext } from "./components/context-api/HomeContext";
+import { Name } from "./components/child-parent/Name";
+import { Ref } from "./components/ref/Ref";
 
 function App() {
   return (
     <div className="app">
       <Nav />
-
+      <Ref />
+      {/* 
       <Routes>
         <Route path={"/"} element={<B />} />
         <Route path={"/products"} element={<Products />}>
@@ -33,7 +36,7 @@ function App() {
         <Route path={"/imagetask"} element={<ImageTask />} />
         <Route path={"/usernames"} element={<UserNames />} />
         <Route path="*" element={<PageNotFound />}></Route>
-      </Routes>
+      </Routes> */}
     </div>
   );
 }
