@@ -17,12 +17,15 @@ import { HomeContext } from "./components/context-api/HomeContext";
 import { Name } from "./components/child-parent/Name";
 import { Ref } from "./components/ref/Ref";
 import { Timer } from "./components/timer/Timer";
+import { RefDom } from "./components/ref/RefDom";
+import { UseReducer } from "./components/reducer/UseReducer";
+import { CounterApp } from "./components/counterapp/CounterApp";
 
 function App() {
   return (
     <div className="app">
       <Nav />
-      <Timer />
+      <CounterApp />
       {/* 
       <Routes>
         <Route path={"/"} element={<B />} />
