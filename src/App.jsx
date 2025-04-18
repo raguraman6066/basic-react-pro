@@ -14,18 +14,21 @@ import { AllProducts } from "./components/allproducts/AllProducts";
 import { UserNames } from "./components/user-names/UserNames";
 import { A } from "./components/context-api/A";
 import { HomeContext } from "./components/context-api/HomeContext";
-import { Name } from "./components/child-parent/Name";
 import { Ref } from "./components/ref/Ref";
 import { Timer } from "./components/timer/Timer";
 import { RefDom } from "./components/ref/RefDom";
 import { UseReducer } from "./components/reducer/UseReducer";
 import { CounterApp } from "./components/counterapp/CounterApp";
+import { Name } from "./redux/components/Name";
+import { Details } from "./redux/components/Details";
 
 function App() {
   return (
     <div className="app">
       <Nav />
-      <CounterApp />
+      <Name />
+      <hr />
+      <Details />
       {/* 
       <Routes>
         <Route path={"/"} element={<B />} />
