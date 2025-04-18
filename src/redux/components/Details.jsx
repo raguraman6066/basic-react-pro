@@ -10,6 +10,9 @@ export const Details = () => {
       <h2> Details Component</h2>
       <p style={{ color: "green", fontWeight: "bold", fontSize: "21px" }}>
         {data.name}
+      </p>{" "}
+      <p style={{ color: "blue", fontWeight: "bold", fontSize: "21px" }}>
+        {data.city}
       </p>
     </div>
   );

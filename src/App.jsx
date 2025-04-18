@@ -21,12 +21,17 @@ import { UseReducer } from "./components/reducer/UseReducer";
 import { CounterApp } from "./components/counterapp/CounterApp";
 import { Name } from "./redux/components/Name";
 import { Details } from "./redux/components/Details";
+import { City } from "./redux/components/City";
 
 function App() {
   return (
     <div className="app">
       <Nav />
-      <Name />
+      <div style={{ display: "flex" }}>
+        <Name />
+        <City />
+      </div>
+
       <hr />
       <Details />
       {/* 
