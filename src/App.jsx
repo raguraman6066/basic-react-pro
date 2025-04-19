@@ -22,21 +22,16 @@ import { CounterApp } from "./components/counterapp/CounterApp";
 import { Name } from "./redux/components/Name";
 import { Details } from "./redux/components/Details";
 import { City } from "./redux/components/City";
+import { ReduxHome } from "./redux/ReduxHome";
+import { ProductDetails } from "./components/product-details/ProductDetails";
 
 function App() {
   return (
     <div className="app">
       <Nav />
-      <div style={{ display: "flex" }}>
-        <Name />
-        <City />
-      </div>
 
-      <hr />
-      <Details />
-      {/* 
       <Routes>
-        <Route path={"/"} element={<B />} />
+        <Route path={"/"} element={<Home />} />
         <Route path={"/products"} element={<Products />}>
           <Route path={"electronics"} element={<Electronics />} />
           <Route path={"jewellery"} element={<Jewelries />} />
@@ -46,9 +41,11 @@ function App() {
         <Route path={"/allproducts"} element={<AllProducts />} />
         <Route path={"/counter"} element={<Counter />} />
         <Route path={"/imagetask"} element={<ImageTask />} />
+        <Route path={"/redux"} element={<ReduxHome />} />
+        <Route path={"/productdetails/:id"} element={<ProductDetails />} />
         <Route path={"/usernames"} element={<UserNames />} />
         <Route path="*" element={<PageNotFound />}></Route>
-      </Routes> */}
+      </Routes>
     </div>
   );
 }

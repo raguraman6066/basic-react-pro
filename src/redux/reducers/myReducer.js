@@ -1,6 +1,7 @@
 const initialData = {
   name: "",
   city: "",
+  products: [],
 };
 const myReducer = (state = initialData, action) => {
   if (action.type == "NAME") {
@@ -12,6 +13,12 @@ const myReducer = (state = initialData, action) => {
     state = {
       ...state,
       city: action.cityName,
+    };
+    console.log(state);
+  } else if (action.type == "PRODUCTS") {
+    state = {
+      ...state,
+      products: action.products,
     };
     console.log(state);
   }

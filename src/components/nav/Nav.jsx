@@ -9,6 +9,7 @@ export const Nav = () => {
         <Link to="/">Home</Link>
         <Link to="/products">Products</Link>
         <Link to="/allproducts">AllProducts</Link>
+        <Link to="/redux">Redux</Link>
         <Link to="/counter">Counter</Link>
         <Link to="/imagetask">ImageTask</Link>
         <Link to="/usernames">UserNames</Link>
