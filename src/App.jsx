@@ -24,6 +24,8 @@ import { Details } from "./redux/components/Details";
 import { City } from "./redux/components/City";
 import { ReduxHome } from "./redux/ReduxHome";
 import { ProductDetails } from "./components/product-details/ProductDetails";
+import { Users } from "./components/json-server/Users";
+import { NewUser } from "./components/json-server/NewUser";
 
 function App() {
   return (
@@ -42,6 +44,15 @@ function App() {
         <Route path={"/counter"} element={<Counter />} />
         <Route path={"/imagetask"} element={<ImageTask />} />
         <Route path={"/redux"} element={<ReduxHome />} />
+        <Route
+          path={"/jsonserver"}
+          element={
+            <div>
+              <NewUser />
+              <Users />
+            </div>
+          }
+        />
         <Route path={"/productdetails/:id"} element={<ProductDetails />} />
         <Route path={"/usernames"} element={<UserNames />} />
         <Route path="*" element={<PageNotFound />}></Route>

@@ -11,6 +11,7 @@ export const Nav = () => {
         <Link to="/allproducts">AllProducts</Link>
         <Link to="/redux">Redux</Link>
         <Link to="/counter">Counter</Link>
+        <Link to="/jsonserver">Users</Link>
         <Link to="/imagetask">ImageTask</Link>
         <Link to="/usernames">UserNames</Link>
       </div>
