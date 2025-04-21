@@ -1,23 +1,28 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-export const Users = () => {
-  let [users, setUsers] = useState([]);
+export const Users = ({ users, getUsers, setIsNewUser, setnewuser }) => {
   useEffect(() => {
     getUsers();
   }, []);
-
-  const getUsers = () => {
+  function deleteUser(id) {
     axios
-      .get("http://localhost:3000/result")
+      .delete(`http://localhost:3000/result/${id}`)
       .then((res) => {
-        setUsers(res.data);
+        console.log("user deleted successfully", res);
       })
       .catch((err) => {
-        alert("something went wrong");
-        console.log(err);
+        console.log("failed to remove user");
       });
-  };
+    alert("user deleted");
+    getUsers();
+  }
+
+  function updateUser(user) {
+    setIsNewUser(false);
+    setnewuser(user);
+  }
+
   return (
     <div>
       <h2>User Information</h2>
@@ -38,10 +43,22 @@ export const Users = () => {
                     <td>{user.name}</td>
                     <td>{user.city}</td>
                     <td>
-                      <button>edit</button>
+                      <button
+                        onClick={() => {
+                          updateUser(user);
+                        }}
+                      >
+                        edit
+                      </button>
                     </td>
                     <td>
-                      <button>delete</button>
+                      <button
+                        onClick={() => {
+                          deleteUser(user.id);
+                        }}
+                      >
+                        delete
+                      </button>
                     </td>
                   </tr>
                 );
